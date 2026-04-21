@@ -1,5 +1,7 @@
 # Agentic AI Tester (Capstone)
 
+[![CI](https://github.com/venkateshk-ih/Agentic-AI/actions/workflows/ci.yml/badge.svg)](https://github.com/venkateshk-ih/Agentic-AI/actions/workflows/ci.yml)
+
 The "Agentic AI Tester" capstone project requires the development of a multi-agent system designed to automate test script generation from documentation.
 
 This repository contains the skeleton for the capstone: a 3-agent system that ingests requirements documentation and produces executable Playwright tests.
