@@ -1,0 +1,84 @@
+[
+  {
+    "id": "REQ-001",
+    "title": "Login Form Rendering",
+    "description": "",
+    "steps": [
+      {
+        "action": "interact",
+        "targetHint": "Login Page",
+        "targetLocator": {
+          "type": "text",
+          "value": "Login Page",
+          "suggested": "getByText(\"Login Page\")"
+        }
+      },
+      {
+        "action": "interact",
+        "targetHint": "Username",
+        "targetLocator": {
+          "type": "label",
+          "value": "Username",
+          "suggested": "getByLabel(\"Username\")"
+        }
+      },
+      {
+        "action": "interact",
+        "targetHint": "Password",
+        "targetLocator": {
+          "type": "label",
+          "value": "Password",
+          "suggested": "getByLabel(\"Password\")"
+        }
+      },
+      {
+        "action": "interact",
+        "targetHint": "Login",
+        "targetLocator": {
+          "type": "text",
+          "value": "Login",
+          "suggested": "getByText(\"Login\")"
+        }
+      }
+    ],
+    "confidence": 0.9
+  },
+  {
+    "id": "REQ-002",
+    "title": "Successful Login with Valid Credentials",
+    "description": "",
+    "steps": [
+      {
+        "action": "type",
+        "targetHint": "Username field",
+        "value": "tomsmith",
+        "targetLocator": {
+          "type": "label",
+          "value": "Username",
+          "suggested": "getByLabel(\"Username\")"
+        }
+      },
+      {
+        "action": "type",
+        "targetHint": "Password field",
+        "value": "SuperSecretPassword!",
+        "targetLocator": {
+          "type": "label",
+          "value": "Password",
+          "suggested": "getByLabel(\"Password\")"
+        }
+      },
+      {
+        "action": "click",
+        "targetHint": "Login",
+        "expected": "Expect navigation to secure area.",
+        "targetLocator": {
+          "type": "text",
+          "value": "Login",
+          "suggested": "getByText(\"Login\")"
+        }
+      }
+    ],
+    "confidence": 0.9
+  }
+]

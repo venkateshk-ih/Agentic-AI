@@ -1,0 +1,38 @@
+{
+  "name": "agentic-ai-tester",
+  "version": "0.1.0",
+  "description": "Multi-agent system that generates Playwright tests from requirements documents (Capstone project).",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "generate": "ts-node src/generate.ts",
+    "test": "npm run build && node dist/test-runner.js",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "playwright:install": "npx playwright install",
+    "test:playwright": "npx playwright test --config=playwright.config.ts",
+    "extract:agentA": "ts-node src/agents/agentA/runner.ts"
+    ,
+    "generate:agentB": "ts-node src/generator/index.ts"
+  },
+  "bin": {
+    "run-pipeline": "scripts/run_pipeline.ts"
+  },
+  "keywords": ["playwright","automation","agents","RAG","capstone"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.36.0",
+    "@playwright/test": "^1.36.0"
+  ,
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "prettier": "^2.8.0",
+    "eslint": "^8.30.0",
+    "@types/node": "^20.0.0"
+  }
+}
